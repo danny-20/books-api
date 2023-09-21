@@ -46,8 +46,7 @@ router.delete("/:id", async (req, res) => {
 //get all
 router.get("/", async (req, res) => {
   try {
-    const books = await Book.find(); // Assuming 'Book' is your model for books
-
+    const books = await Book.find();
     if (books.length === 0) {
       return res.status(404).json({ message: "No books found" });
     }
